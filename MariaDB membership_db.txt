@@ -1,0 +1,23 @@
+CREATE DATABASE membership_db;
+
+USE membership_db;
+
+
+CREATE TABLE member (
+
+m_id CHAR(8) PRIMARY KEY,
+
+m_name CHAR(9) UNIQUE KEY,
+
+m_pw CHAR(20) UNIQUE KEY
+
+); 
+
+INSERT INTO member(m_id, m_name, m_pw)
+VALUES('lee', 'ÀÌ¼ø½Å', 'aa');
+
+SELECT * FROM member;
+
+SELECT pw FROM member WHERE m_id='lee';
+
+DELETE FROM member WHERE m_id='w';
